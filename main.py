@@ -101,8 +101,8 @@ def train(model_to_train, train_dataset_loader, model_optimizer,test_score, test
        
         loss = RMSELoss(out, torch.reshape(test_tem.float(),out.shape)) + RMSELoss(out2, torch.reshape(test_tem2.float(),out2.shape)) + \
         RMSELoss(out3, torch.reshape(test_tem3.float(),out3.shape)) + RMSELoss(out4, torch.reshape(test_tem4.float(),out4.shape)) + \
-        RMSELoss(out5, torch.reshape(test_tem5.float(),out5.shape)) + RMSELoss(out6, torch.reshape(test_tem6.float(),out6.shape)) + \
-        RMSELoss(out7, torch.reshape(test_tem7.float(),out7.shape)) + RMSELoss(out8, torch.reshape(test_tem8.float(),out8.shape)) + \
+        2*(RMSELoss(out5, torch.reshape(test_tem5.float(),out5.shape)) + RMSELoss(out6, torch.reshape(test_tem6.float(),out6.shape)) + \
+        RMSELoss(out7, torch.reshape(test_tem7.float(),out7.shape)) + RMSELoss(out8, torch.reshape(test_tem8.float(),out8.shape))) + \
         L2Loss(model_to_train, 0.001) 
         
         if loss == 'nan':
