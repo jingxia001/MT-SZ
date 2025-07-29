@@ -384,16 +384,16 @@ def compute_corr(test_corr_s, test_rmse_s, test_mae_s):
 
 hidden_channels=64
 hidden_channels2=64
-hc = 128 
-hc2= 128
-hc3 = 128
-hc4 = 128
-hc5 = 128
-hc6 = 128
-hc7 = 128
-hc8 = 128
+hc = 96 
+hc2= 96
+hc3 = 96
+hc4 = 96
+hc5 = 96
+hc6 = 96
+hc7 = 96
+hc8 = 96
 ratio=0.9            #256
-epoch_num = 60
+epoch_num = 40
 decay_rate = 0.005
 decay_step = 20
 lr = 0.0001
